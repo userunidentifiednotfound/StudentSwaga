@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Swaga</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacts.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <!-- Logo and Club Name -->
+        <div class="logo-container">
+            <img src="logo.png" alt="Club Logo" class="logo">
+            <span class="club-name">Students Swaga</span>
+        </div>
+        <!-- Toggle Button for Small Screens -->
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <!-- Navigation Menu -->
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="/about/about.html">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="/membership/membership.html">Membership</a></li>
+            <li><a href="#participate">Participate</a></li>
+            <li><a href="/contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+<!-- Contact Section -->
+
+<div class="scrolling-notification" id="notification-bar">
+    <marquee><p>🚀 New Event: Coding Workshop on Dec 5th! Register Now! 🚀</p></marquee>
+  </div>
+<!-- JavaScript for Menu Toggle -->
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

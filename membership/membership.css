@@ -1,0 +1,249 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #333333);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px; /* Add top padding to compensate for fixed navbar */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.scrolling-notification {
+    background: linear-gradient(90deg, #ff0080, #ff8000, #00f);
+    color: #fff;
+    padding: 10px;
+    padding-top: 90px;
+    animation: scroll-bg 6s linear infinite;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+  }
+  
+  @keyframes scroll-bg {
+    0% { background-position: 0%;}
+    100% { background-position: 100%; }
+  }
+  
+  
+/* Logo and Club Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    filter: drop-shadow(0 0 10px #ff66cc) drop-shadow(0 0 20px #ff66cc);
+}
+
+.club-name {
+    margin-left: 15px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px #ff66cc;
+}
+
+/* Menu Styles */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    padding: 10px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Neon Hover Effect */
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ff66cc, #cc99ff);
+    z-index: -1;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+    filter: blur(4px);
+}
+
+.menu a:hover::before {
+    transform: scale(1);
+}
+
+.menu a:hover {
+    color: #0f2027;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Membership Section */
+.membership-section {
+    width: 100%;
+    padding: 50px 15px;
+    box-sizing: border-box;
+}
+
+.membership-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.membership-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #00e6e6;
+    text-shadow: 0 0 8px rgba(0, 230, 230, 0.8);
+}
+
+.membership-description {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+/* Membership Form */
+.membership-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00e6e6;
+    box-shadow: 0 0 10px rgba(0, 230, 230, 0.5);
+}
+
+/* Submit Button */
+.join-button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: white;
+    background: linear-gradient(135deg, #00e6e6, #00b3b3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 230, 230, 0.5);
+}
+
+.join-button:hover {
+    background: linear-gradient(135deg, #00b3b3, #00e6e6);
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .membership-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .membership-heading {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 12px;
+    }
+
+    .join-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership-heading {
+        font-size: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9rem;
+    }
+
+    .join-button {
+        font-size: 0.9rem;
+    }
+}
